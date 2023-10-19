@@ -1,26 +1,27 @@
 body {
-    box-sizing: border-box;
-    font-family: sans-serif;
-    background-color: rgb(236, 236, 236);
-    margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  background-color: rgb(236, 236, 236);
+  margin: 0;
 }
 
-.notice, .alert {
-    position: absolute;
-    color: white;
-    background-color: #3778c2;
-    margin: 0;
+.notice,
+.alert {
+  position: absolute;
+  color: white;
+  background-color: #3778c2;
+  margin: 0;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
-.hoverable{
-    transition: 0.2s;
+.hoverable {
+  transition: 0.2s;
 }
 
 .hoverable:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
