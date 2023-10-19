@@ -1,0 +1,30 @@
+<section>
+  <h1>
+    Categories
+  </h1>
+
+  <ul>
+    <% @groups.each do |group| %>
+
+    <%= link_to group_path(group) do %>
+        <li>    
+          <%= image_tag image_path("icons/#{group.icon}") %>
+          <h2><%= group.name %></h2>  
+          <p>$
+            <% total = 0 %>
+            <% @entities.each do |entity| %>
+              <% if entity.group_id == group.id %>
+                <% total += entity.amount %>
+              <% end %>
+            <% end %>
+            <%= total %>
+          </p>
+        </li>
+      <% end %>
+
+    <% end %>
+  </ul>
+  <div>
+    <%= link_to "New Category", new_group_path %>
+  </div>
+</section>

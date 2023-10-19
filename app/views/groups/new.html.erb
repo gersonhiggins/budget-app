@@ -1,0 +1,31 @@
+<%= link_to '◀️ ', groups_path(current_user) %>
+
+<h1>
+  New Category
+</h1>
+
+  <%= form_with model: [@group] do |form| %>
+    <div>
+      <%= form.text_field :name, required: true,
+      placeholder: 'Name', 'aria-label': 'Name', maxlength: 15%>
+    </div>
+    <p>(Max. 15 characteres)</p>
+
+    <div>
+      <%= form.hidden_field :icon, id: false %>
+
+        <div>
+          <% @icons.each do |icon| %>
+
+            <label>
+              <%= image_tag("icons/#{icon}", alt: icon, class: 'iconList') %>
+              <%= radio_button :group, :icon, icon, id: "icon_#{icon}" %>
+            </label>
+          <% end %>
+
+        </div>
+        <div>
+          <%= form.submit 'Create Category' %>
+        </div> 
+    </div>
+    <% end %>

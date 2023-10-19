@@ -1,0 +1,10 @@
+<%= link_to '◀️ ', group_path(@group) %>
+<h1>
+  Transaction details
+</h1>
+<div>
+  <p><%= @entity.name %></p>
+  <p>$<%= @entity.amount %></p>  
+</div>
+<p>
+  <%= @entity.created_at %></p>

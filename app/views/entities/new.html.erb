@@ -1,0 +1,35 @@
+<%= link_to '◀️ ', group_path(@group) %> 
+    New Transaction 
+  </h1>
+
+  <%= form_with model: @entity, url: group_entities_path(@group),
+    method: :post do |form| %>
+  
+    <div>    
+      <%= form.text_field :name, required: true,
+      placeholder: 'Name', 'aria-label': 'Name' %>
+    </div>
+
+    <p>(Max. 20 characteres)</p>
+
+    <div>
+      <%= form.number_field :amount, required: true %>
+
+    </div>
+
+    <%= form.hidden_field :author_id, value: current_user.id %>
+    
+    <h2>Categories (select at last 1)</h2>
+    <ul>
+      <% @groups.each do |group| %>
+        <li>
+          <%= form.check_box :group_ids, { multiple: true }, group.id, nil %>
+          <%= group.name %>
+        </li>
+      <% end %>
+    </ul>
+
+    <div>
+      <%= form.submit 'Add Transaction' %>
+    </div>
+  <% end %>  
