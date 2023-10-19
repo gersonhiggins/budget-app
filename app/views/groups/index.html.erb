@@ -1,16 +1,16 @@
-<section>
-  <h1>
+
+  <h2>
     Categories
-  </h1>
+  </h2>
 
   <ul>
     <% @groups.each do |group| %>
 
     <%= link_to group_path(group) do %>
-        <li>    
+        <li class="hoverable">    
           <%= image_tag image_path("icons/#{group.icon}") %>
-          <h2><%= group.name %></h2>  
-          <p>$
+          <p><%= group.name %><p>  
+          <h3>$
             <% total = 0 %>
             <% @entities.each do |entity| %>
               <% if entity.group_id == group.id %>
@@ -18,13 +18,17 @@
               <% end %>
             <% end %>
             <%= total %>
-          </p>
+          </h3>
         </li>
       <% end %>
 
     <% end %>
   </ul>
-  <div>
-    <%= link_to "New Category", new_group_path %>
+  <div class="new">
+    <%= link_to "New", new_group_path, class: "hoverable" %>
   </div>
-</section>
+
+  <%= form_tag(logout_path, method: :delete, class: "logout") do %>
+    <%= submit_tag "Logout" %>
+  <% end %>
+  <%= stylesheet_link_tag 'group' %>
