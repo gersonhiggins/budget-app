@@ -103,3 +103,26 @@ li {
   padding: 10px 20px;
   background-color: white;
 }
+
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 20px;
+  align-items: center;
+  gap: 50px;
+}
+.login {
+  background-color: white;
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.signup{
+  background-color: #3778c2;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+}

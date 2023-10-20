@@ -1,8 +1,9 @@
   <% unless user_signed_in? %><div>
-    <h1>Paid up</h1>
+    <h2>Budget-app</h2>
   </div>
-  <div>
-    <%= link_to 'LOG IN', new_user_session_path %>
-    <%= link_to 'SIGN UP', new_user_registration_path %>
+  <div class="links">
+    <%= link_to 'LOG IN', new_user_session_path, class: 'login' %>
+    <%= link_to 'SIGN UP', new_user_registration_path, class: 'signup' %>
   </div>
+  <%= stylesheet_link_tag 'group' %>
   <% end %>
