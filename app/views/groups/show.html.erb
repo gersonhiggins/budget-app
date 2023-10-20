@@ -7,12 +7,10 @@
 
   <ul>
     <% @entities.each do |entity|%>
-      <%= link_to group_entity_path(@group, entity) do %>
         <li  class="hoverable">
           <p><%= entity.name.capitalize %></p>    
           <p>$<%= entity.amount %></p>  
         </li>
-      <% end %>
     <% end %>
   </ul>
 
