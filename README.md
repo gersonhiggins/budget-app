@@ -145,6 +145,8 @@ Thanks for checking out our books app! Please feel free to reach out with any qu
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
+Thanks to [gregoirrevella](https://www.behance.net/gregoirevella), creator of the template used in this project
+
 would like to thanks Microverse corporation for the README template.<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
