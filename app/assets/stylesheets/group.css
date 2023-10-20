@@ -104,25 +104,39 @@ li {
   background-color: white;
 }
 
+.name-app {
+  position: relative;
+  background-color: inherit;
+  color: rgb(37, 37, 37);
+  font-family: cursive;
+  font-weight: 900;
+  font-size: 40px;
+  margin-top: 200px;
+}
+
 .links {
+  position: absolute;
+  bottom: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
   padding: 10px 20px;
   align-items: center;
-  gap: 50px;
+  gap: 20px;
 }
 
 .login {
-  background-color: white;
+  background-color: #3778c2;
   width: 300px;
   padding: 20px;
   text-align: center;
   margin-top: 50px;
+  border-radius: 5px;
+  color: white;
 }
 
 .signup {
-  background-color: #3778c2;
   padding: 20px;
   width: 300px;
   text-align: center;
