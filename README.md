@@ -59,7 +59,7 @@
 
 ### Live Version <a name="live-version"></a>
 
-N/A
+[live server](https://budgetapp-gh.onrender.com/)
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
