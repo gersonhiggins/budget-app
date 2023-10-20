@@ -1,0 +1,9 @@
+  <% unless user_signed_in? %><div>
+    <h2 class="name-app">Budget-app</h2>
+  </div>
+  <div class="links">
+    <%= link_to 'LOG IN', new_user_session_path, class: 'login' %>
+    <%= link_to 'SIGN UP', new_user_registration_path, class: 'signup' %>
+  </div>
+  <%= stylesheet_link_tag 'group' %>
+  <% end %>

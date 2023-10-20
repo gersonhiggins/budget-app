@@ -1,0 +1,21 @@
+<h2> Transactions </h2>
+<%= link_to '<', groups_path(current_user), class: 'back' %>
+  <div class="info">
+    <p><%= @group.name %><p>
+    <p>$<%= @sum_total %></p>
+  </div> 
+
+  <ul>
+    <% @entities.each do |entity|%>
+        <li  class="hoverable">
+          <p><%= entity.name.capitalize %></p>    
+          <p>$<%= entity.amount %></p>  
+        </li>
+    <% end %>
+  </ul>
+
+  <div class="new">
+    <%= link_to 'New transaction', new_group_entity_path(@group, current_user) %>
+  </div>
+
+  <%= stylesheet_link_tag 'group' %>
