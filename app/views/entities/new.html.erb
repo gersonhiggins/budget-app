@@ -1,0 +1,48 @@
+<%= link_to '<', group_path(@group), class: 'back' %> 
+  <h2>
+    New Transaction 
+  </h2>
+
+  <%= form_with model: @entity, url: group_entities_path(@group),
+    method: :post do |form| %>
+  
+    <div class="field">    
+      <%= form.text_field :name, required: true,
+      placeholder: 'Name', 'aria-label': 'Name' %>
+    </div>
+
+    <p>(Max. 20 characteres)</p>
+
+    <div class="field">
+      <%= form.number_field :amount, required: true, placeholder: 'Amount' %>
+    </div>
+    <%= form.hidden_field :author_id, value: current_user.id %>
+    
+    <h3>Categories</h3>
+    <ul>
+      <% @groups.each do |group| %>
+        <li onclick="toggleCheckbox(this)">
+        <%= form.check_box :group_ids, { multiple: true }, group.id, nil %>
+        <%= group.name %>
+      </li>
+      <% end %>
+    </ul>
+
+    <div class="create">
+      <%= form.submit 'New Transaction' %>
+    </div>
+  <% end %>  
+  <script>
+  function toggleCheckbox(li) {
+    const checkbox = li.querySelector('input[type="checkbox"]');
+    const isChecked = checkbox.checked;
+
+    // Uncheck all checkboxes before checking the clicked one
+    document.querySelectorAll('input[type="checkbox"]').forEach(function(checkbox) {
+      checkbox.checked = false;
+    });
+
+    checkbox.checked = !isChecked;
+  }
+</script>
+  <%= stylesheet_link_tag 'entity' %>

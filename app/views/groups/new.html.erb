@@ -1,0 +1,32 @@
+<%= link_to '<', groups_path(current_user), class: 'back' %>
+
+<h2>
+  New Category
+</h2>
+
+  <%= form_with model: [@group] do |form| %>
+    <div class="field">
+      <%= form.text_field :name, required: true,
+      placeholder: 'Name', 'aria-label': 'Name', maxlength: 15%>
+    </div>
+    <p>(Max. 15 characteres)</p>
+
+    <div>
+      <%= form.hidden_field :icon, id: false %>
+
+        <div class="icons">
+          <% @icons.each do |icon| %>
+
+            <label>
+              <%= image_tag("icons/#{icon}", alt: icon, class: 'hoverable') %>
+              <%= radio_button :group, :icon, icon, id: "icon_#{icon}" %>
+            </label>
+          <% end %>
+
+        </div>
+        <div class="create">
+          <%= form.submit 'Create' %>
+        </div> 
+    </div>
+    <% end %>
+    <%= stylesheet_link_tag 'group' %>

@@ -1,0 +1,143 @@
+body {
+  background-color: rgb(236, 236, 236);
+  margin: 0;
+}
+
+h2 {
+  background-color: #3778c2;
+  margin: 0;
+  top: 0;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-weight: 100;
+}
+
+ul {
+  padding: 20px;
+  margin-bottom: 80px;
+}
+
+li {
+  background-color: rgb(253, 253, 253);
+  padding: 10px;
+  margin-bottom: 15px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.logout {
+  position: absolute;
+  top: 23px;
+  right: 10px;
+}
+
+.logout input {
+  background-color: inherit;
+  border: none;
+  color: white;
+  font-size: 20px;
+}
+
+.new {
+  position: fixed;
+  width: 100%;
+  padding: 20px 0 20px 0;
+  bottom: 0;
+  left: 0;
+  background-color: #5fb523;
+  color: white;
+  text-align: center;
+}
+
+.new a {
+  border: 1px solid white;
+  padding: 10px 80px;
+}
+
+.field input {
+  width: 100%;
+  border: none;
+  height: 60px;
+  font-size: 20px;
+  padding-left: 10px;
+  border-bottom: 2px solid rgb(236, 236, 236);
+}
+
+.back {
+  position: absolute;
+  color: white;
+  top: 18px;
+  left: 10px;
+  font-size: 30px;
+}
+
+.icons {
+  padding-left: 15px;
+  margin-bottom: 80px;
+}
+
+.create {
+  position: fixed;
+  background-color: #5fb523;
+  padding: 10px 0 10px 0;
+  text-align: center;
+  margin-top: 20px;
+  width: 100%;
+  bottom: 0;
+}
+
+.create input {
+  background-color: inherit;
+  border: 1px solid white;
+  padding: 10px 80px;
+  color: white;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: white;
+}
+
+.name-app {
+  position: relative;
+  background-color: inherit;
+  color: rgb(37, 37, 37);
+  font-family: cursive;
+  font-weight: 900;
+  font-size: 40px;
+  margin-top: 200px;
+}
+
+.links {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 0;
+  align-items: center;
+  gap: 20px;
+}
+
+.login {
+  background-color: #3778c2;
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  margin-top: 50px;
+  border-radius: 5px;
+  color: white;
+}
+
+.signup {
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+}
